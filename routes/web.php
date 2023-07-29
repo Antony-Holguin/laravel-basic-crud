@@ -16,7 +16,7 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::get('/', [PostController::class, 'index'])->name('login.index');
+Route::get('/', [MainController::class, 'index'])->name('main.page');
 
 Route::post('/', [PostController::class, 'store'])->name('login.store');
 
@@ -25,6 +25,6 @@ Route::get('/register', [RegisterController::class, 'index'])->name('register.in
 Route::post('/register', [RegisterController::class, 'store']);
 
 //Pagina principal
-Route::get('/dashboard', [MainController::class, 'index'])->name('main.page');
+
 
 
