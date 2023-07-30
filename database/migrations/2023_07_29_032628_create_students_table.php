@@ -17,12 +17,12 @@ return new class extends Migration
             $table->string('names', 75);
             $table->string('lastname', 75);
             $table->string('email', 100)->unique();
-            $table->string('description');
-            $table->date('date_birth');
+            $table->string('description')->nullable(true);
+            $table->date('date_birth')->nullable(true);
             $table->integer('age')->unsigned(); //unsigned = no negative values
-            $table->decimal('weight',10,2);
-            $table->float('scholarship'); 
-            $table->boolean('status');
+            $table->decimal('weight',10,2)->nullable(true);
+            $table->float('scholarship')->nullable(true); 
+            $table->boolean('status')->nullable(true);
             $table->timestamps();
         });
     }
